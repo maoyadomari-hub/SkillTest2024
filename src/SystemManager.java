@@ -74,6 +74,7 @@ public class SystemManager {
 	public void load() throws Exception {
 		//CSVファイルの読み込み処理
 		//fl.read("http://192.168.1.181/java/Device.csv");
+		//ローカルテスト環境
 		fl.read("http://localhost/java/Device.csv");		
 
 	}
