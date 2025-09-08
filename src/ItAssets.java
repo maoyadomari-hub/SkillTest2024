@@ -58,7 +58,6 @@ public class ItAssets {
 			this.address = null;
 		}
 		
-		
 		//個別にフィールドの値を取得するメソッド
 		public int getId(){
 			return this.id;

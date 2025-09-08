@@ -4,7 +4,6 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 public class FileLoader {
-
 	public static void read(String fname) throws Exception {
 		//外部ファイル(CSV)の読み込み
 		URL u = new URL(fname);
@@ -12,12 +11,12 @@ public class FileLoader {
 		InputStreamReader in = new InputStreamReader(strm);
 		BufferedReader br = new BufferedReader(in);
 		
-		
 		//itAssets型へデータを格納する
 		//初期化
 		for(int j = 0; j < SystemManager.idata.length; j++) {
 			SystemManager.idata[j] = new ItAssets();
 		}
+		
 		//データの格納
 		int i =0;
 		String line;

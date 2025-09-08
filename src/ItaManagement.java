@@ -41,6 +41,7 @@ public class ItaManagement {
 		}
 		managmentTop();
 	}
+	
 	public void itaAdd() {
 		String itaaddscreen =
 				"\n<情報機器新規登録>"+
@@ -120,7 +121,6 @@ public class ItaManagement {
 				break;
 		}
 		
-		
 		//更新したい値を格納する
 		ItAssets  wita = new ItAssets();
 		wita.setValue(SystemManager.idata[j].getId(), SystemManager.idata[j].getKinds(),SystemManager.idata[j].getName(), SystemManager.idata[j].getData(), SystemManager.idata[j].getAddress());
@@ -129,7 +129,6 @@ public class ItaManagement {
 		
 		return;
 	}
-
 	
 	public void itaDelete () {
 		String itaDeleteScreen =
@@ -162,17 +161,10 @@ public class ItaManagement {
 		//末尾の値が冗長なので削除
 		SystemManager.idata[j].deleteValue();
 		
-		//データチェック用
-//		for(int n = 0; j < SystemManager.sdata.length && SystemManager.sdata[n].getNo() != 0; n++) {
-//				SystemManager.sdata[n].displayValue();
-//			}	
-		
 		//データを完了画面に送信
 		done("de",wita);
 		return;
 	}
-
-
 	
 	public void done(String processing, ItAssets donedata) {
 		String processingName = "";
@@ -183,7 +175,6 @@ public class ItaManagement {
 		}else if(processing.equals("de")) {
 			 processingName = "削除";
 		}
-
 		
 		String doneScreen = 
 				"\n<"+processingName+"完了情報>"+
@@ -197,6 +188,4 @@ public class ItaManagement {
 		System.out.println(doneScreen);
 		return;
 	}
-
-
 }

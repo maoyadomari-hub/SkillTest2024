@@ -58,9 +58,10 @@ public class SystemManager {
 				//保存して終了
 				this.save();
 				System.out.println("保存して終了しました");
-				return;
-				//保存しないで終了
+				return;		
+				
 			case "X":
+				//保存しないで終了
 				System.out.println("終了");
 				return;
 
@@ -73,9 +74,10 @@ public class SystemManager {
 	
 	public void load() throws Exception {
 		//CSVファイルの読み込み処理
-		//fl.read("http://192.168.1.181/java/Device.csv");
+		
+		fl.read("http://192.168.1.181/java/Device.csv");
 		//ローカルテスト環境
-		fl.read("http://localhost/java/Device.csv");		
+		//fl.read("http://localhost/java/Device.csv");		
 
 	}
 	public void save() throws Exception {
